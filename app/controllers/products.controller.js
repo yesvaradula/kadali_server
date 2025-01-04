@@ -8,6 +8,12 @@ exports.exporttoexcel = (_req, res) => {
 	});
 };
 
+exports.updatePriceTag = (req, res) => {
+	products.updatePriceTag(req).then((response) => {
+		return res.send(response).status(200);
+	});
+}
+
 exports.getAllProducts = (req, res) => {
 	products.getAllProducts(req).then(async (p) => {
 		let products = {};

@@ -11,6 +11,10 @@ router.get('/getNextCode/:code', products.getNextCode);
 router.post('/addscans', products.addScannedItems);
 router.post('/updatescans', products.updateScannedItems);
 
+router.post('/update/price', products.updatePriceTag);
+
+
 router.get('/', products.getAllProducts);
+
 
 module.exports = router;
